@@ -6,12 +6,13 @@ class itemPage {
     
     addToCart() {
         cy.get('#product-addtocart-button > span').click()
+        cy.wait(3000)
         cy.get('.message-success').contains('You added Jade Yoga Jacket to your shopping cart.')
     }
     
     goToCheckout() {
-        cy.get('.showcart > .counter').click()
-        cy.get('#top-cart-btn-checkout').click()
+        cy.get('.showcart').click({force: true})
+        cy.get('#top-cart-btn-checkout').click({force: true})
     }
 }
 
