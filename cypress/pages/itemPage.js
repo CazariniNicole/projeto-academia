@@ -7,7 +7,7 @@ class itemPage {
     addToCart() {
         cy.get('#product-addtocart-button > span').click()
         cy.wait(3000)
-        cy.get('.message-success').contains('You added Jade Yoga Jacket to your shopping cart.')
+        cy.get('.message-success').should('contains.text', 'You added Jade Yoga Jacket to your shopping cart.')
     }
     
     goToCheckout() {
