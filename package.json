@@ -1,5 +1,5 @@
 {
-  "name": "buger-eats",
+  "name": "nicol_cazarini_academia_trilha_3",
   "version": "1.0.0",
   "description": "Teste",
   "main": "index.js",
@@ -9,9 +9,9 @@
   "author": "Nicole Cazarini",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^10.2.0",
+    "@faker-js/faker": "^7.5.0",
+    "cypress": "^10.7.0",
     "cypress-file-upload": "^5.0.8",
-    "cypress-xpath": "^2.0.0",
-    "faker": "^5.5.3"
+    "cypress-xpath": "^2.0.1"
   }
 }
