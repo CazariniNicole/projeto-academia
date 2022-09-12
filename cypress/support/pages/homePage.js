@@ -10,7 +10,7 @@ class homePage {
     }
 
     signIn() {
-        cy.get(HomeElements.signIn()).click()
+        cy.get(HomeElements.buttonSignIn()).click()
 
     }
 
@@ -20,7 +20,7 @@ class homePage {
     }
 
     clicarEmCadastre(){
-        cy.get(HomeElements.bottonCreateAccount()).click()
+        cy.xpath(HomeElements.bottonCreateAccount()).click()
     }
 }
 
