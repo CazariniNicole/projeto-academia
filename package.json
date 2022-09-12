@@ -3,15 +3,27 @@
   "version": "1.0.0",
   "description": "Teste",
   "main": "index.js",
+  "author": "Nicole Cazarini",
+  "license": "MIT",
   "scripts": {
     "test": "npx cypress open"
   },
-  "author": "Nicole Cazarini",
-  "license": "MIT",
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps",
+    "cucumberJson": {
+      "generate": false,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".json"
+    }
+  },
   "devDependencies": {
+    "@cucumber/cucumber": "^8.5.3",
     "@faker-js/faker": "^7.5.0",
     "cypress": "^10.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-file-upload": "^5.0.8",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "multiple-cucumber-html-reporter": "^2.0.0"
   }
 }
