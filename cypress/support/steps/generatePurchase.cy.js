@@ -5,29 +5,39 @@ import productsPage from '../pages/productsPage'
 import itemPage from '../pages/itemPage'
 import checkoutPage from '../pages/checkoutPage'
 import orderPage from '../pages/orderPage'
+import generatePurchaseFactory from '../factories/generatePurchaseFactory'
+const HomePage = new homePage
+const LoginPage = new loginPage
+const ProductsPage = new productsPage
+const ItemPage = new itemPage
+const CheckoutPage = new checkoutPage
+const OrderPage = new orderPage
+const GeneratePurchaseFactory = new generatePurchaseFactory
 
 import generatePurchaseFactory from '../factories/generatePurchaseFactory'
 
+var data = generatePurchaseFactory.purchase()
 
+    Given(/^Que estou logado$/, (  ) =>{
+		HomePage.go();
+        HomePage.signIn();
+        LoginPage.fillForm(data);
+        HomePage.researchingProduct(data);
+        ProductsPage.productsPage();
+    } );
 
-describe('Purchase', () => {
-    
-    it('Gerar uma compra com sucesso', function () {
+    When(/^adiciono um produto no carrinho$/, (  ) =>{
+		ItemPage.selectItem();
+        ItemPage.InformationItem();
+        ItemPage.addToCart();
+        ItemPage.goToCheckout();
+    } );
 
-        var data = generatePurchaseFactory.purchase()
-        
-        homePage.go()
-        homePage.signIn()
-        loginPage.fillForm(data)
-        homePage.researchingProduct(data)
-        productsPage.selectItem()
-        itemPage.InformationItem()
-        itemPage.addToCart()
-        itemPage.goToCheckout()
-        checkoutPage.checkout()
-        orderPage.order()
+    And(/^realizo o checkout$/, (  ) =>{
+      CheckoutPage.checkout();
+    } );
 
-    })  
+    Then(/^valido a compra com sucesso $/, (  ) =>{
+		OrderPage.orderPage();
+    } );
 
-
-})

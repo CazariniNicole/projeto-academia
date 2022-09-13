@@ -7,5 +7,5 @@ class checkoutPage {
         cy.get('.payment-method-content > :nth-child(4) > div.primary > .action > span').click()
     } 
 }
-export default new checkoutPage
+export default checkoutPage
 
