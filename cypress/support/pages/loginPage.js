@@ -11,4 +11,4 @@ class loginPage {
 
 }    
 
-export default new loginPage
+export default loginPage
