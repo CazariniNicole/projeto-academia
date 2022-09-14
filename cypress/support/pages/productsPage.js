@@ -1,8 +1,11 @@
+import productsElements from "../elements/productsElements"
+const ProductsElements = new productsElements
+
 class productsPage {
 
     selectItem() {
-        cy.get('#product-item-info_1338 > .details > .name > .product-item-link').click()
-        cy.get('.base').should('have.text', 'Jade Yoga Jacket')
+        cy.get(ProductsElements.linkProduct()).click()
+        cy.get(ProductsElements.nomeProduct()).should('have.text', 'Jade Yoga Jacket')
 
     }
 }    

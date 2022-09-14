@@ -1,4 +1,3 @@
-require('cypress-xpath')
 import homeElements from '../elements/homeElements'
 const HomeElements = new homeElements
 const url = Cypress.config("baseUrl")
