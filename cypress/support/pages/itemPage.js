@@ -1,6 +1,9 @@
+import itemElements from "../elements/itemElements"
+
 class itemPage {
     InformationItem() {
-        cy.get('#option-label-size-144-item-167').click()
+
+        cy.get(itemElements.configItemSize()).click()
         cy.get('#option-label-color-93-item-50').click()
     }
     
@@ -15,5 +18,12 @@ class itemPage {
         cy.get('#top-cart-btn-checkout').click({force: true})
     }
 }
+
+
+configItemSize = () => { return '#option-label-size-144-item-167'}
+configItemcolor = () => { return '#option-label-color-93-item-50'}
+bottonAddToCart = () => { return '#product-addtocart-button > span'}
+bottonShowCart  = () => { return '.showcart'}
+bottonShowCart  = () => { return '#top-cart-btn-checkout'}
 
 export default new itemPage
