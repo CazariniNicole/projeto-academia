@@ -20,7 +20,7 @@ var data = generatePurchaseFactory.purchase()
     HomePage.signIn();
     LoginPage.fillForm(data);
     HomePage.researchingProduct(data);
-    ProductsPage.productsPage();
+    ProductsPage.selectItem();
     } );
 
     When(/^adiciono um produto no carrinho$/, (  ) =>{

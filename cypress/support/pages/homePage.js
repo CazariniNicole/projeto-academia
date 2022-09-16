@@ -19,7 +19,7 @@ class homePage {
     }
 
     clicarEmCadastre(){
-        cy.xpath(HomeElements.bottonCreateAccount()).click()
+        cy.get(HomeElements.bottonCreateAccount()).click()
     }
 }
 

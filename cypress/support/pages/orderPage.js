@@ -8,4 +8,4 @@ class orderPage {
 
     }
 
-}export default new orderPage
+}export default orderPage

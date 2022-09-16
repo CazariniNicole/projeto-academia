@@ -10,4 +10,4 @@ class productsPage {
     }
 }    
 
-export default new productsPage
+export default productsPage

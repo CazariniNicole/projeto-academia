@@ -20,4 +20,4 @@ class itemPage {
         cy.get(ItemElements.bottonGoToCheckout()).click({force: true})
     }
 }
-export default new itemPage
+export default itemPage
