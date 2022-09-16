@@ -3,7 +3,7 @@ const ItemElements = new itemElements
 
 class itemPage {
 
-    InformationItem() {
+    informationItem() {
 
         cy.get(ItemElements.configItemSize()).click()
         cy.get(ItemElements.configItemcolor()).click()

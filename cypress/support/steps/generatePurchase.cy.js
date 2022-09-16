@@ -17,21 +17,21 @@ var data = generatePurchaseFactory.purchase()
 
     Given(/^Que estou logado$/, (  ) =>{
 		HomePage.go();
-        HomePage.signIn();
-        LoginPage.fillForm(data);
-        HomePage.researchingProduct(data);
-        ProductsPage.productsPage();
+    HomePage.signIn();
+    LoginPage.fillForm(data);
+    HomePage.researchingProduct(data);
+    ProductsPage.productsPage();
     } );
 
     When(/^adiciono um produto no carrinho$/, (  ) =>{
 		ItemPage.selectItem();
-        ItemPage.InformationItem();
-        ItemPage.addToCart();
-        ItemPage.goToCheckout();
+    ItemPage.informationItem();
+    ItemPage.addToCart();
+    ItemPage.goToCheckout();
     } );
 
     And(/^realizo o checkout$/, (  ) =>{
-      CheckoutPage.checkout();
+    CheckoutPage.checkout();
     } );
 
     Then(/^valido a compra com sucesso $/, (  ) =>{
