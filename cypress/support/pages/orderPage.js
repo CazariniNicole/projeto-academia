@@ -3,9 +3,9 @@ const OrderElements = new orderElements
 
 class orderPage {
 
-    order() {
-        cy.get(OrderElements.messageSucess()).should('have.text', 'Thank you for your purchase!')
-
+    orderMessageSucess(expectedMessage) {
+        cy.wait(20000)
+        cy.get(OrderElements.messageSucess()).should('have.text', expectedMessage)
     }
 
 }export default orderPage

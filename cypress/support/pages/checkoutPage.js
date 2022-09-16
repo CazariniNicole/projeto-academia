@@ -4,6 +4,7 @@ const CheckoutElements = new checkoutElements
 class checkoutPage {
 
     checkout() {
+        cy.wait(20000)
         cy.get(CheckoutElements.shippingAddress()).contains('Shipping Address')
         cy.get(CheckoutElements.bottonexemp1()).click()
         cy.get(CheckoutElements.bottonexemp2()).click()

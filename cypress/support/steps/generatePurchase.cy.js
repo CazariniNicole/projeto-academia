@@ -24,7 +24,6 @@ var data = generatePurchaseFactory.purchase()
     } );
 
     When(/^adiciono um produto no carrinho$/, (  ) =>{
-		ItemPage.selectItem();
     ItemPage.informationItem();
     ItemPage.addToCart();
     ItemPage.goToCheckout();
@@ -34,7 +33,8 @@ var data = generatePurchaseFactory.purchase()
     CheckoutPage.checkout();
     } );
 
-    Then(/^valido a compra com sucesso $/, (  ) =>{
-		OrderPage.orderPage();
-    } );
+    Then(/^valido a compra com sucesso$/, (  ) =>{
+      const expectedMessage = 'Thank you for your purchase!'
+      OrderPage.orderMessageSucess(expectedMessage);
+  } );
 

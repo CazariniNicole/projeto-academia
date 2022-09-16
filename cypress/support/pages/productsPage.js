@@ -6,7 +6,6 @@ class productsPage {
     selectItem() {
         cy.get(ProductsElements.linkProduct()).click()
         cy.get(ProductsElements.nomeProduct()).should('have.text', 'Jade Yoga Jacket')
-
     }
 }    
 

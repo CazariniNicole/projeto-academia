@@ -4,7 +4,6 @@ const ItemElements = new itemElements
 class itemPage {
 
     informationItem() {
-
         cy.get(ItemElements.configItemSize()).click()
         cy.get(ItemElements.configItemcolor()).click()
     }
