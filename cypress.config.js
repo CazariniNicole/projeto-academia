@@ -11,9 +11,9 @@ module.exports = defineConfig({
   viewportHeight: 900,
   defaultCommandTimeout: 15000,
   chromeWebSecurity: false,
-  video: false,
-  reports: false,
-  screenshots: false,
+  video: true,
+  reports: true,
+  screenshots: true,
   projectId: '91dj83',
   e2e: {
     setupNodeEvents,
