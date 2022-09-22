@@ -14,7 +14,7 @@ module.exports = defineConfig({
   video: false,
   reports: false,
   screenshots: false,
-  projectId: '1234',
+  projectId: '91dj83',
   e2e: {
     setupNodeEvents,
     baseUrl: 'https://magento.nublue.co.uk/',
