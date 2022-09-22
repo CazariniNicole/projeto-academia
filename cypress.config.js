@@ -9,7 +9,7 @@ async function setupNodeEvents(on, config) {
 module.exports = defineConfig({
   viewportWidth: 1440,
   viewportHeight: 900,
-  defaultCommandTimeout: 10000,
+  defaultCommandTimeout: 15000,
   chromeWebSecurity: false,
   video: false,
   reports: false,
