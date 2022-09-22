@@ -4,10 +4,7 @@ const OrderElements = new orderElements
 class orderPage {
 
     orderMessageSucess(expectedMessage) {
-        cy.intercept(
-            { method: 'GET', url: '**/content.html' },
-            ).as('getLastRequest');
-        cy.wait('@getLastRequest');
+        cy.wait(10000);
         cy.get(OrderElements.messageSucess()).should('have.text', expectedMessage)
     }
 
