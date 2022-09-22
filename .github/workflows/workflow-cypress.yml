@@ -1,8 +1,6 @@
 name: Cypress Smoke Test
 
-on: 
-
-  workflow_dispatch:
+on: [push]
 
 jobs:
 
